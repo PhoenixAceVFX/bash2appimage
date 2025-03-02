@@ -4,6 +4,9 @@ Ironically for the purpose of compiling Bash scripts to AppImage
 Originally used for [HyprUpld](https://github.com/PhoenixAceVFX/hyprupld) this script can compile any Bash scripts to an AppImage  
 > This only works on Bash Scripts that can run without any extra ones
 
+# Dependencies?  
+The script has been setup to install any dependencies if they are needed  
+
 # How to use this?  
 Clone the repo to your local system  
 Create a folder named "Scripts"  
