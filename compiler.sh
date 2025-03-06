@@ -151,10 +151,10 @@ if [ ! -d "$SCRIPTS_DIR" ]; then
 fi
 
 # Check for icon and create a default one if not found
-ICON_PATH="$(pwd)/Icon.png"
+ICON_PATH="$(pwd)/HyprUpld.png"
 log_verbose "Checking for icon at: $ICON_PATH"
 if [ ! -f "$ICON_PATH" ]; then
-  echo -e "${YELLOW}Icon.png not found in project root! Creating a placeholder icon...${NC}"
+  echo -e "${YELLOW}Icon HyprUpld.png not found in project root! Creating a placeholder icon...${NC}"
   # Create a simple colored square as placeholder icon using convert (from ImageMagick)
   if command -v convert &> /dev/null; then
     log_verbose "Using ImageMagick to create placeholder icon"
@@ -194,6 +194,12 @@ fi
 log_verbose "Scanning Scripts directory for files to process"
 SCRIPT_COUNT=0
 for script in "$SCRIPTS_DIR"/*; do
+  # Skip files in the Archive directory
+  if [[ "$script" == *"/Archive/"* ]]; then
+    log_verbose "Skipping archived script: $script"
+    continue
+  fi
+  
   if [ -f "$script" ]; then
     SCRIPT_COUNT=$((SCRIPT_COUNT+1))
     SCRIPT_NAME=$(basename "$script")
