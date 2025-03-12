@@ -1,19 +1,61 @@
-# Bash2AppImage  
-Another script of mine in Bash  
-Ironically for the purpose of compiling Bash scripts to AppImage  
-Originally used for [HyprUpld](https://github.com/PhoenixAceVFX/hyprupld) this script can compile any Bash scripts to an AppImage  
-> This only works on Bash Scripts that can run without any extra ones
+# Bash2AppImage
 
-# Dependencies?  
-The script has been setup to install any dependencies if they are needed  
+Bash2AppImage is a Bash script designed to compile other Bash scripts into AppImage packages, facilitating easy distribution and execution across various Linux distributions. 
 
-# How to use this?  
-Clone the repo to your local system  
-Create a folder named "Scripts"  
-Drop your .sh files into that folder  
-Put an Icon.png into the project root  
-> Make sure this is a square image or you may get weird results  
-> If an Icon.png isn't found it will make a placeholder
+## Features
 
-Run `bash compiler.sh`  
-Profit  
+- **Bash Script Compilation**: Convert standalone Bash scripts into self-contained AppImage packages.
+- **Dependency Management**: Automatically installs necessary dependencies to ensure smooth operation.
+
+## Prerequisites
+
+- Ensure you have `git` installed to clone the repository.
+
+## Installation Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/PhoenixAceVFX/bash2appimage.git
+   ```
+
+
+
+2. **Navigate to the Directory**:
+   ```bash
+   cd bash2appimage
+   ```
+
+
+
+3. **Prepare Your Scripts**:
+   - Create a directory named `Scripts` within the project root:
+     ```bash
+     mkdir Scripts
+     ```
+   - Place your `.sh` Bash script files into the `Scripts` directory.
+
+4. **Add an Icon (Optional)**:
+   - Place an `Icon.png` file in the project root directory. Ensure it's a square image to avoid display issues.
+   - If no `Icon.png` is provided, a placeholder icon will be used.
+
+5. **Run the Compiler**:
+   ```bash
+   bash compiler.sh
+   ```
+
+
+
+6. **Verify the AppImage**:
+   - After compilation, test the generated AppImage to ensure it functions as expected.
+
+## License
+
+This project is licensed under the GNU General Public License v2.0. For more details, refer to the [LICENSE](https://github.com/PhoenixAceVFX/bash2appimage/blob/main/LICENSE) file.
+
+## Acknowledgments
+
+Bash2AppImage was originally developed for the [HyprUpld](https://github.com/PhoenixAceVFX/HyprUpld) project but is versatile enough to compile any standalone Bash script into an AppImage.
+
+For questions or contributions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/PhoenixAceVFX/bash2appimage).
+
+*Note: AppImage is a format for distributing portable software on Linux without requiring superuser permissions to install the application.* 
